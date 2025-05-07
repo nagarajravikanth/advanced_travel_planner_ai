@@ -16,17 +16,17 @@ o	Implement a system to manage user profiles and preferences, allowing for perso
 
 # Approach to Building the Travel Planner AI Chatbot
 1. Define Requirements
-# 	Identify the main functionalities of the chatbot:
+ 	Identify the main functionalities of the chatbot:
 o	Searching for hotels.
 o	Finding activities in a destination.
 o	Searching for flights.
-# 	Determine how the chatbot will interact with users and respond to various queries.
+ 	Determine how the chatbot will interact with users and respond to various queries.
 2. Set Up the Development Environment
-# 	Install necessary libraries:
+ 	Install necessary libraries:
 o	Flask for the web application.
 o	OpenAI SDK for integrating ChatGPT.
 o	Amadeus SDK for accessing travel-related APIs.
-# 	Create a virtual environment to manage dependencies.
+ 	Create a virtual environment to manage dependencies.
 3. Design the Architecture
 # 	Components:
 o	User Interface (UI): Built using HTML and JavaScript, allowing users to interact with the chatbot.
