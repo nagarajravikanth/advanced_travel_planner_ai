@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner AI Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #chatbox {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            height: 400px;
+            overflow-y: scroll;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .user, .bot {
+            margin: 10px 0;
+            padding: 8px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+        .user {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        .bot {
+            background-color: #f8d7da;
+            color: #842029;
+        }
+        #input-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        #user_input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        #send {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #send:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel Planner AI Chatbot</h1>
+    <div id="chatbox"></div>
+    <div id="input-container">
+        <input type="text" id="user_input" placeholder="Ask me about your travel plans..." />
+        <input type="hidden" id="user_id" value="user123"> <!-- Example user ID -->
+        <button id="send">Send</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#send').click(function() {
+                var userInput = $('#user_input').val();
+                var userId = $('#user_id').val();
+                if (userInput.trim() === "") return; // Prevent sending empty messages
+                $('#chatbox').append('<div class="user">You: ' + userInput + '</div>');
+                $.post('/ask', { user_input: userInput, user_id: userId }, function(data) {
+                    $('#chatbox').append('<div class="bot">Bot: ' + data.response + '</div>');
+                    $('#user_input').val('');
+                    $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+                });
+            });
+
+            // Allow sending message with Enter key
+            $('#user_input').keypress(function(e) {
+                if (e.which === 13) { // Enter key
+                    $('#send').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
