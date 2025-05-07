@@ -46,7 +46,6 @@ functions.py:
 5.	Use the OpenAI API to generate activity suggestions.
 
 2.	Create the User Interface
-
 •	conversation_bot.html:
 o	Develop a simple web interface using HTML and JavaScript to allow users to interact with the chatbot.
 7. System Architecture 
@@ -63,7 +62,7 @@ Tech Stack for Travel Planner AI Chatbot
 •	OpenAI API: Used to integrate ChatGPT for natural language processing, allowing the chatbot to understand user queries and generate responses.
 •	Amadeus API: A travel API used to fetch travel-related data, such as hotels, flights, and activities. The Amadeus SDK for Python simplifies the process of making API calls.
 
-# 9.Challenges
+# Challenges
 1.	API Integration:
 o	Integrating multiple APIs (OpenAI and Amadeus) posed challenges in terms of authentication, handling API responses, and managing rate limits.
 2.	Data Handling:
@@ -72,7 +71,7 @@ o	Ensuring that the data returned from the APIs was correctly parsed and formatt
 o	Developing robust functions to extract relevant information (like origin and destination) from user input was challenging, especially with varied phrasing.
 4.	Error Handling:
 o	Implementing effective error handling for API calls to manage failures gracefully and provide meaningful feedback to users.
-# 10. Lessons Learned
+# Lessons Learned
 1.	Importance of API Documentation:
 o	Thoroughly reviewing API documentation is crucial for understanding the available endpoints, required parameters, and response formats.
 2.	User-Centric Design:
