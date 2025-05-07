@@ -1,8 +1,8 @@
-# travel_planner_ai_chatbot
+# Travel_planner_ai_chatbot
 This advanced Travel Planner AI chatbot can manage user profiles, fetch real-time hotel and activity suggestions, and provide personalized responses based on user preferences.It is integrated with external API for fecthing flights and hotel data
 Background
 The Travel Planner AI chatbot is designed to enhance the travel planning experience for users by providing personalized assistance. It offers recommendations for top hotels and suggests tailored itineraries based on the user's specified destinations. By leveraging advanced algorithms and user preferences, the chatbot aims to simplify the trip planning process, making it more efficient and enjoyable for travelers. (Note:The chatbot will be further enhanced for different search types)
-Objectives
+# Objectives
 1.	User Assistance:
 o	Provide users with a conversational interface to assist them in planning their travel, including finding hotels, activities, and flights.
 2.	Integration with APIs:
@@ -14,21 +14,21 @@ o	Ensure that the chatbot can generate dynamic responses based on user input and
 5.	Profile Management:
 o	Implement a system to manage user profiles and preferences, allowing for personalized interactions.
 
-Approach to Building the Travel Planner AI Chatbot
+# Approach to Building the Travel Planner AI Chatbot
 1. Define Requirements
-•	Identify the main functionalities of the chatbot:
+# 	Identify the main functionalities of the chatbot:
 o	Searching for hotels.
 o	Finding activities in a destination.
 o	Searching for flights.
-•	Determine how the chatbot will interact with users and respond to various queries.
+# 	Determine how the chatbot will interact with users and respond to various queries.
 2. Set Up the Development Environment
-•	Install necessary libraries:
+# 	Install necessary libraries:
 o	Flask for the web application.
 o	OpenAI SDK for integrating ChatGPT.
 o	Amadeus SDK for accessing travel-related APIs.
-•	Create a virtual environment to manage dependencies.
+# 	Create a virtual environment to manage dependencies.
 3. Design the Architecture
-•	Components:
+# 	Components:
 o	User Interface (UI): Built using HTML and JavaScript, allowing users to interact with the chatbot.
 o	Flask Web Server (app.py): Handles incoming requests and responses.
 o	OpenAI API: Provides natural language processing capabilities for generating responses.
@@ -63,7 +63,7 @@ Tech Stack for Travel Planner AI Chatbot
 •	OpenAI API: Used to integrate ChatGPT for natural language processing, allowing the chatbot to understand user queries and generate responses.
 •	Amadeus API: A travel API used to fetch travel-related data, such as hotels, flights, and activities. The Amadeus SDK for Python simplifies the process of making API calls.
 
-9.Challenges
+# 9.Challenges
 1.	API Integration:
 o	Integrating multiple APIs (OpenAI and Amadeus) posed challenges in terms of authentication, handling API responses, and managing rate limits.
 2.	Data Handling:
@@ -72,7 +72,7 @@ o	Ensuring that the data returned from the APIs was correctly parsed and formatt
 o	Developing robust functions to extract relevant information (like origin and destination) from user input was challenging, especially with varied phrasing.
 4.	Error Handling:
 o	Implementing effective error handling for API calls to manage failures gracefully and provide meaningful feedback to users.
-10. Lessons Learned
+# 10. Lessons Learned
 1.	Importance of API Documentation:
 o	Thoroughly reviewing API documentation is crucial for understanding the available endpoints, required parameters, and response formats.
 2.	User-Centric Design:
